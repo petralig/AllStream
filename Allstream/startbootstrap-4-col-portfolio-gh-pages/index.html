@@ -22,7 +22,9 @@
     <meta name="twitter:player:height" content="270">
     <meta name="twitter:player:stream" content="https://content.jwplatform.com/videos/1KNHWu8m-480.mp4">
     <meta name="twitter:player:stream:content_type" content="video/mp4; codecs=&quot;avc1.42E01E, mp4a.40.2&quot;">
- 
+    
+      
+      <link rel="icon" type="image/x-icon" href="favicon.ico"/>
       <title>Allstream</title>
 
     <!-- Bootstrap core CSS -->
@@ -36,6 +38,8 @@
 <style> body { padding-top: 60px; } @media (max-width: 980px) { body { padding-top: 60px; } } </style>
   <body>
 
+
+      
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
       <div class="container">
@@ -96,12 +100,13 @@
         </div>
         <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item">
           <div class="card h-100">
-            <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+            <a href="elokuva2.html"><img class="card-img-top" src="thor.jpg" alt=""></a>
             <div class="card-body">
               <h4 class="card-title">
-                <a href="#">Project Two</a>
+                <a href="elokuva2.html">Thor Ragnarok</a>
+                  <button onclick="myFunction()">Try it</button>
               </h4>
-              <p class="card-text">tekstiä</p>
+              <p class="card-text"></p>
             </div>
           </div>
         </div>
@@ -112,7 +117,7 @@
               <h4 class="card-title">
                 <a href="#">Project Three</a>
               </h4>
-              <p class="card-text">tekstiä</p>
+              <p class="card-text"></p>
             </div>
           </div>
         </div>
@@ -123,18 +128,25 @@
               <h4 class="card-title">
                 <a href="#">Project Four</a>
               </h4>
-              <p class="card-text">tekstiä</p>
+              <p class="card-text"></p>
             </div>
           </div>
         </div>
-        <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item">
+        
+          
+        <!--  <h1 class="my-4">Toiminta
+        <small></small>
+      </h1>-->
+          
+          
+          <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item">
           <div class="card h-100">
             <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
             <div class="card-body">
               <h4 class="card-title">
                 <a href="#">Project Five</a>
               </h4>
-              <p class="card-text">tekstiä</p>
+              <p class="card-text"></p>
             </div>
           </div>
         </div>
@@ -145,7 +157,7 @@
               <h4 class="card-title">
                 <a href="#">Project Six</a>
               </h4>
-              <p class="card-text">tekstiä</p>
+              <p class="card-text"></p>
             </div>
           </div>
         </div>
@@ -156,7 +168,7 @@
               <h4 class="card-title">
                 <a href="#">Project Seven</a>
               </h4>
-              <p class="card-text">tekstiä</p>
+              <p class="card-text"></p>
             </div>
           </div>
         </div>
@@ -167,7 +179,7 @@
               <h4 class="card-title">
                 <a href="#">Project Eight</a>
               </h4>
-              <p class="card-text">tekstiä</p>
+              <p class="card-text"></p>
             </div>
           </div>
         </div>
@@ -233,6 +245,12 @@
           }
         });
       }
+  </script>
+  <script>
+    function myFunction() {
+        var myWindow = window.open("", "MsgWindow", "width=200,height=100");
+        myWindow.document.write("<p>This is 'MsgWindow'. I am 200px wide and 100px tall!</p>");
+    }
   </script>
 
 
