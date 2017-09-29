@@ -22,7 +22,12 @@
     <meta name="twitter:player:height" content="270">
     <meta name="twitter:player:stream" content="https://content.jwplatform.com/videos/1KNHWu8m-480.mp4">
     <meta name="twitter:player:stream:content_type" content="video/mp4; codecs=&quot;avc1.42E01E, mp4a.40.2&quot;">
-    
+   
+    <meta name="google-signin-scope" content="profile email">
+    <meta name="google-signin-client_id" content="240418806205-dtajtduu3urouoqtc57s0m4n6kpie8ad.apps.googleusercontent.com">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+<script type="text/javascript" src="jwplayer.js" jwplayer.key="SE6pswECFjQvxi7eX0zeHdyyAgT2HoEAzsVJNHJ8aOc="></script>
+      
       
       <link rel="icon" type="image/x-icon" href="favicon.ico"/>
       <title>Allstream</title>
@@ -60,24 +65,73 @@
             <li class="nav-item">
               <a class="nav-link" href="#">Asetukset</a>
             </li>
+         
             <li class="nav-item">
-              <a class="nav-link" href="#">Käyttäjä</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Kirjaudu ulos</a>
+              <a class="nav-link" href="#" onclick="signOut();">Kirjaudu ulos</a>
+
+               <a href="#" onclick="signOut();">Sign out</a>
+<script>
+  function signOut() {
+    var auth2 = gapi.auth2.getAuthInstance();
+    auth2.signOut().then(function () {
+      console.log('User signed out.');
+    });
+  }
+</script>
+ 
+                
+                
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#">Haku</a>
+              </li>
+              <li>
+                                     <!--  login alkaa -->
+   <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
+    <script>
+      function onSignIn(googleUser) {
+        // Useful data for your client-side scripts:
+        var profile = googleUser.getBasicProfile();
+        console.log("ID: " + profile.getId()); // Don't send this directly to your server!
+        console.log('Full Name: ' + profile.getName());
+        console.log('Given Name: ' + profile.getGivenName());
+        console.log('Family Name: ' + profile.getFamilyName());
+        console.log("Image URL: " + profile.getImageUrl());
+        console.log("Email: " + profile.getEmail());
+
+        // The ID token you need to pass to your backend:
+        var id_token = googleUser.getAuthResponse().id_token;
+        console.log("ID Token: " + id_token);
+      };
+    </script>
+        
+        <!--login loppuu -->
+        <script>          
+         function onSignIn(googleUser) {
+  var profile = googleUser.getBasicProfile();
+  console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+  console.log('Name: ' + profile.getName());
+  console.log('Image URL: ' + profile.getImageUrl());
+  console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+}
+         </script>
+                  
+                  
+                  
+                  
               </li>
           </ul>
         </div>
       </div>
     </nav>
-
+ 
     <!-- Page Content -->
     <div class="container">
 
       <!-- Page Heading -->
+         
+
+        
       <h1 class="my-4">Jännitys
         <small></small>
       </h1>
@@ -226,8 +280,11 @@
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/popper/popper.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-
-    <script>
+    
+      <!-- Google login  -->
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    
+      <script>
       if (window == window.top) {
           document.getElementById("title").style.display = "block";
           document.getElementById("description").style.display = "block";

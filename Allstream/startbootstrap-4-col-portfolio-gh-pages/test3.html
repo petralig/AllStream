@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JW Player</title>
+    <script src="jwplayer.js"></script>
+    <script src="http://users.metropolia.fi/~juhataps/Allstream/jwplayer-7.12.8/jwplayer.js"></script>
+    
+    <script>jwplayer.key = "SE6pswECFjQvxi7eX0zeHdyyAgT2HoEAzsVJNHJ8aOc=";</script>
+    <script type="text/javascript" src="jwplayer.js" jwplayer.key="SE6pswECFjQvxi7eX0zeHdyyAgT2HoEAzsVJNHJ8aOc="></script>
+    </head>
+<body>
+<div id="player"></div>
+
+<script>
+    jwplayer("player").setup({
+        sources: [{
+            /*< file: "rtmp://195.148.104.124:1935/Allstream/content/sample.mp4" */
+            file: "rtmp://195.148.104.124:1935/Allstream"
+                    
+        }],
+        height: 360,
+        width: 640
+    });
+</script>
+
+</body>
+</html>
