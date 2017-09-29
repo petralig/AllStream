@@ -43,3 +43,38 @@ a {
 .card-body {
     background-color: #111111;
 }
+
+/* ------ TESTI JQUERY HIDE/SHOW OVERLAY START ------ */
+
+.message{
+	width: 100%;
+	height: auto;
+	background: #111111;
+	color: white;
+	padding: 20px;
+    margin-top: 80px;
+	position:fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	display: none;
+    overflow-y: scroll;
+
+}
+
+.message.is-open{
+  display: block;
+    z-index: 500;    
+}
+
+.button{
+	display: inline-block;
+	padding: 10px 24px;
+	background: #343a40;
+	color: white;
+	text-decoration: none;
+    font-size: 16px;
+}
+
+/* ------ TESTI JQUERY HIDE/SHOW OVERLAY END ------ */

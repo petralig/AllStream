@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <title>Script Ready</title>
+        <script src="jquery-2.1.1.min.js"></script> 
+        <script src="test2.js"></script>
+        <script>
+            $(document).ready(function(){
+            $("p").click(function(){
+            $(this).hide();
+            $("#kuva").hide();
+            });
+            $('body').css("background-color","yellow");
+            });
+        </script>
+    </head>
+    <body>
+        <p>What a nice animal</p>
+        <img id="kuva" src="IMG_0466.JPG" />
+        <a id="alink" href="http://www.metropolia.fi">Metropolia</a>
+        <p>If you click on me, I will disappear.</p>
+        <p>Click me away!</p>
+        <p>Click me too!</p>
+    </body>
+</html>
+
+Ja tässä vielä miten voidaan tuoda takaisin:
+https://jqueryui.com/show/
+ 
+Show | jQuery UI
+jqueryui.com
+jQuery UI is a curated set of user interface interactions, effects, widgets, and themes built on top of the jQuery JavaScript Library. Whether you're building highly interactive web applications or you just need to add a date picker to a form control, jQuery UI is the perfect choice.
+
+Ja tuli myös mieleen tämä, katso:
+https://stackoverflow.com/questions/23257860/setting-a-jquery-dialog-semi-transparent
+
+ $('#HelpWindow').dialog({
+...
+}).parents(".ui-dialog").css("opacity", "0.5");
+
+https://www.w3schools.com/jquery/html_attr.asp
+https://www.w3schools.com/jquery/tryit.asp?filename=tryjquery_html_attr_set
