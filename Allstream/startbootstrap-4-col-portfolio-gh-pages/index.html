@@ -24,11 +24,11 @@
     <meta name="twitter:player:stream:content_type" content="video/mp4; codecs=&quot;avc1.42E01E, mp4a.40.2&quot;">
    
       <!-- Google login -->
-      <!--
+     
     <meta name="google-signin-scope" content="profile email">
     <meta name="google-signin-client_id" content="240418806205-dtajtduu3urouoqtc57s0m4n6kpie8ad.apps.googleusercontent.com">
     <script src="https://apis.google.com/js/platform.js" async defer></script>
--->
+
       <!-- jw-player -->
       
       <script type="text/javascript" src="jwplayer.js" jwplayer.key="SE6pswECFjQvxi7eX0zeHdyyAgT2HoEAzsVJNHJ8aOc="></script>
@@ -75,17 +75,14 @@
               <a class="nav-link" href="#" onclick="signOut();">Kirjaudu ulos</a>
 
                <a href="#" onclick="signOut();">Sign out</a>
-<script>
-  function signOut() {
-    var auth2 = gapi.auth2.getAuthInstance();
-    auth2.signOut().then(function () {
-      console.log('User signed out.');
-    });
-  }
-</script>
- 
-                
-                
+                <script>
+                  function signOut() {
+                    var auth2 = gapi.auth2.getAuthInstance();
+                    auth2.signOut().then(function () {
+                      console.log('User signed out.');
+                    });
+                  }
+                </script>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#">Haku</a>
@@ -163,7 +160,7 @@
                 <div class="message">
 	               <a href="#" class="button">Close</a>
                    <h1>Thor Ragnarok</h1>
-                   <div id="botr_1KNHWu8m_lFIUNxKM_div"></div>
+                   <!--<div id="botr_1KNHWu8m_lFIUNxKM_div"></div>-->
                    <!-- JW-playerin scripti videolle -->
                    <script type="text/javascript" src="//content.jwplatform.com/players/b50jod2v-lFIUNxKM.js"></script>
                    <p id="description"></p>
@@ -172,14 +169,22 @@
             </div>
           </div>
         </div>
+          
         <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item">
           <div class="card h-100">
-            <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+            <img class="card-img-top" src="inception.jpg" alt="">
             <div class="card-body">
-              <h4 class="card-title">
-                <a href="#">Project Three</a>
-              </h4>
-              <p class="card-text"></p>
+                <h4 class="card-title">The Inception</h4>
+                <a href="#" class="button2">Watch video</a>
+                <div class="message2">
+	               <a href="#" class="button2">Close</a>
+                   <h1>The Inception</h1>
+                   <!--<div id="botr_1KNHWu8m_lFIUNxKM_div"></div> -->
+                   <!-- JW-playerin scripti videolle -->
+                   <script type="text/javascript" src="//content.jwplatform.com/players/zNf2BhVC-lFIUNxKM.js"></script>
+                   <p id="description"></p>
+                </div>
+              <p class="card-text text-white">Kesto 3:04 min <br/> Julkasupäivä: 3.2.2017</p>
             </div>
           </div>
         </div>
@@ -195,15 +200,9 @@
               <p class="card-text"></p>
             </div>
           </div>
-        </div>
-        
+        </div>          
           
-        <!--  <h1 class="my-4">Toiminta
-        <small></small>
-      </h1>-->
-          
-          
-          <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item">
+        <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item">
           <div class="card h-100">
             <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
             <div class="card-body">
@@ -225,6 +224,7 @@
             </div>
           </div>
         </div>
+          
         <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item">
           <div class="card h-100">
             <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
@@ -236,6 +236,7 @@
             </div>
           </div>
         </div>
+          
         <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item">
           <div class="card h-100">
             <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
@@ -345,6 +346,39 @@ button.on("click touchstart", function(e) {
       </script>
       
       <!--  JQUERY SHOW/HIDE OVERLAY END -->
+      
+ 
+      
+            
+      <!--  JQUERY SHOW/HIDE OVERLAY START 2 -->
+      
+      <script>
+      var button = $(".button2"),
+		message = $(".message2"),
+		open = false;
+
+button.on("click touchstart", function(e) {
+	e.preventDefault();
+	
+	// if opened is true, then we will want to close
+	// the overlay as it will mean its already visible.
+	if (open){
+		open = false;
+		message.removeClass("is-open");
+	} 
+	// if false, then we want to open the overlay
+	// so we set open equal to true. 
+	else{
+		open = true;
+		message.addClass("is-open");
+		console.log(open);
+	}
+	
+});
+      </script>
+      
+      <!--  JQUERY SHOW/HIDE OVERLAY END 2 -->
+      
       
   <!--
   <script>

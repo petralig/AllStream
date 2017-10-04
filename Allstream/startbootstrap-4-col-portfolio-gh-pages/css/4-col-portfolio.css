@@ -46,7 +46,7 @@ a {
 
 /* ------ TESTI JQUERY HIDE/SHOW OVERLAY START ------ */
 
-.message{
+.message, .message2{
 	width: 100%;
 	height: auto;
 	background: #111111;
@@ -63,12 +63,12 @@ a {
 
 }
 
-.message.is-open{
+.message.is-open, .message2.is-open{
   display: block;
     z-index: 500;    
 }
 
-.button{
+.button, .button2{
 	display: inline-block;
 	padding: 10px 24px;
 	background: #343a40;
